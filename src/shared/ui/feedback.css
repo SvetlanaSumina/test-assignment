@@ -1,0 +1,40 @@
+.toast-error {
+  position: fixed;
+  z-index: 5;
+  right: 23px;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(450px, calc(100vw - 32px));
+  padding: 12px 14px;
+  border: 1px solid #f1d8d2;
+  border-radius: 10px;
+  color: #8c4033;
+  background: #fff9f7;
+  box-shadow: 0 12px 32px #44302b16;
+}
+.toast-error > span {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #f7e5e0;
+  font-size: 12px;
+  font-weight: 700;
+}
+.toast-error p {
+  font-size: 11px;
+  line-height: 1.5;
+}
+.toast-error button {
+  align-self: flex-start;
+  border: 0;
+  background: transparent;
+  color: #a77e76;
+  cursor: pointer;
+  font-size: 19px;
+  line-height: 14px;
+}

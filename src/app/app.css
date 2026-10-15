@@ -1,0 +1,135 @@
+:root {
+  --container-welcome: 74.375rem;
+  --container-chat: 92.5rem;
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.25rem;
+  --space-5: 1.5rem;
+  --space-6: 1.875rem;
+  --space-8: 2.5rem;
+  --space-10: 3.125rem;
+  --sidebar-width: min(19.6875rem, 28vw);
+}
+.app-shell {
+  min-height: 100vh;
+}
+.topbar {
+  height: clamp(3.75rem, 4vw, 4.625rem);
+  padding: 0 clamp(1.125rem, 3vw, 5.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.93);
+  border-bottom: 1px solid #eef0ed;
+  position: relative;
+  z-index: 2;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.brand-name {
+  font: 800 20px/1 var(--font-heading);
+  letter-spacing: -1px;
+}
+.brand-name span {
+  color: var(--green);
+}
+.brand-mark {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border-radius: 10px;
+  transform: rotate(-8deg);
+  background: linear-gradient(145deg, #35b489, #148365);
+  box-shadow: 0 5px 12px #17876b30;
+}
+.brand-mark span {
+  display: block;
+  width: 3px;
+  border-radius: 4px;
+  background: white;
+  transform: rotate(8deg);
+}
+.brand-mark span:nth-child(1) {
+  height: 10px;
+  opacity: 0.76;
+}
+.brand-mark span:nth-child(2) {
+  height: 16px;
+}
+.brand-mark span:nth-child(3) {
+  height: 11px;
+  opacity: 0.86;
+}
+.topbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #878e8a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.topbar-dot {
+  width: 7px;
+  height: 7px;
+  background: #43b184;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #eaf5ef;
+}
+.topbar-divider {
+  color: #c6cbc8;
+  font-weight: 400;
+}
+.icon-button {
+  border: 0;
+  background: transparent;
+  color: #77817b;
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 11px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.icon-button:hover {
+  background: #f0f5f1;
+  color: var(--green);
+}
+@media (max-width: 680px) {
+  .topbar {
+    height: 61px;
+    padding: 0 18px;
+  }
+  .brand-mark {
+    width: 28px;
+    height: 28px;
+  }
+  .brand-name {
+    font-size: 18px;
+  }
+  .topbar-center {
+    font-size: 0;
+    gap: 0;
+  }
+  .topbar-center .topbar-dot {
+    margin-right: 8px;
+  }
+  .topbar-divider {
+    display: none;
+  }
+}
